@@ -1,7 +1,7 @@
 import unittest
 import cv2
 
-import QrDetecting
+import QrDetectingV2.py
 
 
 img = cv2.imread("aboba.png")
