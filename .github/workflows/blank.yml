@@ -33,8 +33,7 @@ jobs:
      #   pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pip install unittest
+        # pip install unittest
+        pip install pytest
         pip install cv2
-    - name: Test with pytest
-      run: |
-        unittest QrTestV2
+        pytest QrTestV2.py
