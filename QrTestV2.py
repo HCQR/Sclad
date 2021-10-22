@@ -16,9 +16,9 @@ class TestQRCase (unittest.TestCase):
        # global img
         self.assertEqual(QrDetectingV2.QrDetecting(img),1)
 
-   # def test_QrNet(self):
+    def test_QrNet(self):
        # global img
-    #    self.assertEqual(QrDetectingV2.QrDetecting(img1),2)
+        self.assertEqual(QrDetectingV2.QrDetecting(img1),2)
 
 if __name__ == '__main__':
     unittest.main()
