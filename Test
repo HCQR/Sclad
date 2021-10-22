@@ -36,4 +36,4 @@ jobs:
       run: |
         # pip install unittest
         pip install pytest
-        pytest QrTestV2
+        pytest HCQR/Sclad/QrTestV2
