@@ -17,32 +17,23 @@ class let():
         pygame.draw(screen,GREEN, (self.x, self.y), self.lenght, self.High)
 
 
+Table1= obj(45,35,100,300,BLUE)
+Table2= obj(45,35,200,200,GREEN)
+Table3= obj(45,35,250,300,WHITE)
+Table4= obj(45,35,130,220,YELLOW)
 
-Tabels=[]
 
-Obj = obj()   # создание стилажа
 running = True
 while running:
     clock.tick(60) # 60 fps
 
-    for event in pygame.event.get(): # перебирает события
-        if event.type == pygame.QUIT:
-            running = False
-
-    for Tabel in Tabels:
-        keys = pygame.key.get_pressed()
-
-
-        if keys[pygame.K_SPACE]:
-            Tabels.append(let(x=input(), y=input(), lenght=input()))
-
-    for Tabel in Tabels:
-        Tabel.draw(screen)
-
 
     drawWindow()
 
-    Obj.draw()
+    Table1.draw()
+    Table2.draw()
+    Table3.draw()
+    Table4.draw()
 
 
     surf = pygame.Surface((850, 650))
