@@ -1,0 +1,54 @@
+
+from Obj import obj
+from Draw import *
+from settings import *
+
+
+class let():
+    def __init__(self, x, y, lenght):
+        self.x=x
+        self.y=y
+        self.lenght=lenght
+        self.High=40
+
+
+
+    def draw(self,x,y):
+        pygame.draw(screen,GREEN, (self.x, self.y), self.lenght, self.High)
+
+
+
+Tabels=[]
+
+Obj = obj()   # создание стилажа
+running = True
+while running:
+    clock.tick(60) # 60 fps
+
+    for event in pygame.event.get(): # перебирает события
+        if event.type == pygame.QUIT:
+            running = False
+
+    for Tabel in Tabels:
+        keys = pygame.key.get_pressed()
+
+
+        if keys[pygame.K_SPACE]:
+            Tabels.append(let(x=input(), y=input(), lenght=input()))
+
+    for Tabel in Tabels:
+        Tabel.draw(screen)
+
+
+    drawWindow()
+
+    Obj.draw()
+
+
+    surf = pygame.Surface((850, 650))
+    surf.blit(screen, (0, 0))
+
+    pygame.display.flip()
+    #pygame.display.update()  # обновление окна
+
+pygame.quit()
